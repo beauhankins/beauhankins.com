@@ -4,4 +4,21 @@ footer#footer {
   padding: 3em 6em;
   box-sizing: border-box;
   bottom: 0;
+
+  @media screen and (max-width: $breakpoint-medium) {
+    padding: 3em 2em;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    position: static;
+
+    .left, .right {
+      text-align: left;
+      position: static;
+    }
+
+    .right {
+      a { text-decoration: underline; }
+    }
+  }
 }

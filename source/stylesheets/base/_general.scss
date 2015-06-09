@@ -18,7 +18,7 @@ ul {
 
 .alignment-container {
   position: relative;
-  height: 1em;
+  min-height: 1em;
 
   .left {
     position: absolute;
@@ -35,9 +35,17 @@ ul {
 
 .content-container {
   width: 100%;
-  max-width: 40em;
+  max-width: $breakpoint-small;
   margin: auto;
   margin-top: 7.5em;
+  margin-bottom: 7.5em;
+  padding: 0 2em;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $breakpoint-small) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 ul.nav-list {
