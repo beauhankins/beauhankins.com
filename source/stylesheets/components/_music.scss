@@ -14,7 +14,7 @@ ul.music-list {
   }
 
   @media screen and (max-width: $breakpoint-small) {
-    width: 8em;
+    display: block;
   }
 }
 
@@ -22,4 +22,9 @@ ul.music-list {
   display: table-cell;
   vertical-align: top;
   padding-left: 2em;
+
+  @media screen and (max-width: $breakpoint-small) {
+    padding-left: 0;
+    padding-top: 2em;
+  }
 }
