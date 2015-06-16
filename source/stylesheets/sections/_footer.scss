@@ -5,11 +5,11 @@ footer#footer {
   box-sizing: border-box;
   bottom: 0;
 
-  @media screen and (max-width: $breakpoint-medium) {
+  @media all and (max-width: $breakpoint-medium) {
     padding: 3em 2em;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media all and (max-width: $breakpoint-small) {
     position: static;
 
     .left, .right {

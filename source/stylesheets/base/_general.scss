@@ -42,7 +42,7 @@ ul {
   padding: 0 2em;
   box-sizing: border-box;
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media all and (max-width: $breakpoint-small) {
     margin-top: 0;
     margin-bottom: 0;
   }
