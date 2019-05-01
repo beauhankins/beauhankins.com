@@ -1,0 +1,163 @@
+@charset "UTF-8";
+body {
+  background-color: #777777;
+  color: white;
+  font-family: "HK Grotesk", "Helvetica", sans-serif;
+  padding: 3rem;
+  margin: 0 auto;
+  position: relative;
+  line-height: 1.5; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0; }
+  a:after {
+    content: ' ⇝'; }
+  a.no-arrow:after {
+    content: none; }
+
+h1 {
+  font-family: 'GT Sectra';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 0.5em; }
+
+h3 {
+  font-weight: normal;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 0.5em; }
+
+h4 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em; }
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("/fonts/HKGrotesk-Regular.eot");
+  src: url("/fonts/HKGrotesk-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/HKGrotesk-Regular.ttf") format("truetype"), url("/fonts/HKGrotesk-Regular.woff") format("woff"), url("/fonts/HKGrotesk-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url("/fonts/HKGrotesk-Bold.eot");
+  src: url("/fonts/HKGrotesk-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/HKGrotesk-Bold.ttf") format("truetype"), url("/fonts/HKGrotesk-Bold.woff") format("woff"), url("/fonts/HKGrotesk-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: bold; }
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: url("/fonts/GT-Sectra-Fine-Book.eot");
+  src: url("/fonts/GT-Sectra-Fine-Book.eot?#iefix") format("embedded-opentype"), url("/fonts/GT-Sectra-Fine-Book.ttf") format("truetype"), url("/fonts/GT-Sectra-Fine-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: url("/fonts/GT-Sectra-Fine-Medium-Italic.eot");
+  src: url("/fonts/GT-Sectra-Fine-Medium-Italic.eot?#iefix") format("embedded-opentype"), url("/fonts/GT-Sectra-Fine-Medium-Italic.ttf") format("truetype"), url("/fonts/GT-Sectra-Fine-Medium-Italic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+.heading {
+  padding: 3rem 0; }
+  .heading h1 {
+    max-width: 13.5em; }
+
+.flex {
+  display: flex; }
+
+.items-center {
+  align-items: center; }
+
+.justify-center {
+  justify-content: center; }
+
+.justify-between {
+  justify-content: space-between; }
+
+.justify-around {
+  justify-content: space-around; }
+
+.col-1 {
+  width: 8.33333%; }
+
+.col-2 {
+  width: 16.66667%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33333%; }
+
+.col-5 {
+  width: 41.66667%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33333%; }
+
+.col-8 {
+  width: 66.66667%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33333%; }
+
+.col-11 {
+  width: 91.66667%; }
+
+.col-12 {
+  width: 100%; }
+
+@media (min-width: 1000px) {
+  .md-flex {
+    display: flex; }
+  .md-col-1 {
+    width: 8.33333%; }
+  .md-col-2 {
+    width: 16.66667%; }
+  .md-col-3 {
+    width: 25%; }
+  .md-col-4 {
+    width: 33.33333%; }
+  .md-col-5 {
+    width: 41.66667%; }
+  .md-col-6 {
+    width: 50%; }
+  .md-col-7 {
+    width: 58.33333%; }
+  .md-col-8 {
+    width: 66.66667%; }
+  .md-col-9 {
+    width: 75%; }
+  .md-col-10 {
+    width: 83.33333%; }
+  .md-col-11 {
+    width: 91.66667%; }
+  .md-col-12 {
+    width: 100%; }
+  h1 {
+    font-size: 48px; }
+  .heading {
+    padding: 3rem 0; } }
