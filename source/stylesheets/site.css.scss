@@ -1,0 +1,243 @@
+body {
+  background-color: #777777;
+  color: white;
+  font-family: "HK Grotesk", "Helvetica", sans-serif;
+  padding: 3rem;
+  margin: 0 auto;
+  position: relative;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+
+  &:after {
+    content: ' ⇝'
+  }
+
+  &.no-arrow:after {
+    content: none;
+  }
+}
+
+h1 {
+  font-family: 'GT Sectra';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: font-url('fonts/HKGrotesk-Regular.eot');
+  src: font-url('fonts/HKGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+       font-url('fonts/HKGrotesk-Regular.ttf') format('truetype'),
+       font-url('fonts/HKGrotesk-Regular.woff') format('woff'),
+       font-url('fonts/HKGrotesk-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: font-url('fonts/HKGrotesk-Bold.eot');
+  src: font-url('fonts/HKGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+       font-url('fonts/HKGrotesk-Bold.ttf') format('truetype'),
+       font-url('fonts/HKGrotesk-Bold.woff') format('woff'),
+       font-url('fonts/HKGrotesk-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: font-url('fonts/GT-Sectra-Fine-Book.eot');
+  src: font-url('fonts/GT-Sectra-Fine-Book.eot?#iefix') format('embedded-opentype'),
+       font-url('fonts/GT-Sectra-Fine-Book.ttf') format('truetype'),
+       font-url('fonts/GT-Sectra-Fine-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Sectra';
+  src: font-url('fonts/GT-Sectra-Fine-Medium-Italic.eot');
+  src: font-url('fonts/GT-Sectra-Fine-Medium-Italic.eot?#iefix') format('embedded-opentype'),
+       font-url('fonts/GT-Sectra-Fine-Medium-Italic.ttf') format('truetype'),
+       font-url('fonts/GT-Sectra-Fine-Medium-Italic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+.heading {
+  padding: 3rem 0;
+
+  h1 {
+    max-width: 13.5em;
+  }
+}
+
+.moire-img {
+  position: relative;
+  background-image: url(../images/moire.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 400px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(rgba(#a5a5a5, 0) 0%, #a5a5a5 50%);
+  }
+}
+
+.moire {
+  position: absolute;
+  z-index: -1;
+  width: 560px;
+  height: 560px;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  filter: blur(4px);
+  display: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(rgba(#a5a5a5, 0) 0%, #a5a5a5 30%);
+    transform: rotate(-45deg) scale(1.75, 1.25);
+  }
+
+  .lens {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 480px;
+    width: 480px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+
+    &.magenta {
+      background: repeating-radial-gradient(
+        transparent,
+        #FF6AAE 2px,
+        #FF6AAE calc(2px),
+        transparent calc(4px),
+        transparent calc(8px)
+      );
+    }
+
+    &.cyan {
+      margin-top: 10px;
+      background: repeating-radial-gradient(
+        transparent,
+        #00D3FF 2px,
+        #00D3FF calc(2px),
+        transparent calc(4px),
+        transparent calc(8px)
+      );
+      animation: rotate-cyan 6s linear infinite;
+    }
+
+    &.yellow {
+      margin-left: 20px;
+      margin-top: 10px;
+      background: repeating-radial-gradient(
+        transparent,
+        #B4FF00 2px,
+        #B4FF00 calc(2px),
+        transparent calc(4px),
+        transparent calc(8px)
+      );
+      animation: rotate-yellow 12s linear infinite;
+    }
+  }
+}
+
+@-webkit-keyframes rotate-yellow {
+  from {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1.2,1);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(315deg) scale(1.2,1);
+  }
+}
+
+@-webkit-keyframes rotate-cyan {
+  from {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.2,1);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(405deg) scale(1.2,1);
+  }
+}
+
+.flex { display: flex }
+
+.items-center { align-items: center }
+.justify-center  { justify-content: center }
+.justify-between { justify-content: space-between }
+.justify-around  { justify-content: space-around }
+
+@for $i from 1 through 12 {
+  .col-#{$i} { width: 100% * ($i / 12) }
+}
+
+@media (min-width: 1000px) {
+  .md-flex { display: flex }
+
+  @for $i from 1 through 12 {
+    .md-col-#{$i} { width: 100% * ($i / 12) }
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .content-bio {
+    font-size: 22px;
+  }
+
+  .heading {
+    padding: 3rem 0;
+  }
+}
